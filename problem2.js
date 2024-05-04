@@ -30,15 +30,17 @@
 let s="abcabcbb"
 let maxLength=0;
 let start=0;
-let charMap={}
-for(let end=0; end<s.length; end++){
-    const currentChar=s[end];
-    if(charMap[currentChar]!==undefined){
-        start=Math.max(start, charMap[currentChar]+1);
+// let charMap={}
+let obj={}
+
+for(let i=0; i<s.length; i++){
+    const currentChar=s[i];
+    if(obj[currentChar]!==undefined){
+        start=Math.max(start, obj[currentChar]+1);
 
     }
-    charMap[currentChar]=end;
-    maxLength=Math.max(maxLength, end-start+1);
+    obj[currentChar]=i;
+    maxLength=Math.max(maxLength, i-start+1);
 }
 console.log(maxLength)
 
