@@ -61,9 +61,9 @@ symbols = {
 value = 0;
 for (let i = 0; i < s.length; i++) {
     if (symbols[s[i]] < symbols[s[i + 1]]) {
-        value -= symbols[s[i]];
+        value=value- symbols[s[i]];
     } else {
-        value += symbols[s[i]];
+        value=value+ symbols[s[i]];
     }
 }
 console.log(value)
