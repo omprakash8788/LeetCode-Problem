@@ -30,7 +30,7 @@
 // s consists of parentheses only '()[]{}'.
 
 let s = "()"
-let stack = s.split('');
+let stack = s.split('');  //'(' ,')'
 if(stack.length % 2 != 0) return false;
 let arr = []
 while(stack.length)
