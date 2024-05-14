@@ -51,13 +51,32 @@
 // 0 <= nums[i] <= 50
 // 0 <= val <= 100
 
+// let nums = [3,2,2,3], val = 3
+// // Output: 2, nums = [2,2,_,_]
+// let k = -1;
+// for (let i=0; i<nums.length ; i++){
+//     if(nums[i]!=val){
+//         k++
+//         nums[k] = nums[i]
+//     }
+// }
+// console.log(++k);
+
+
+// second solution
 let nums = [3,2,2,3], val = 3
-// Output: 2, nums = [2,2,_,_]
-let k = -1;
-for (let i=0; i<nums.length ; i++){
-    if(nums[i]!=val){
-        k++
-        nums[k] = nums[i]
+    let k = 0; // k tracks the index where the next non-val element should be placed
+
+    // Iterate through the array
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== val) {
+            // If current element is not equal to val, replace nums[k] with nums[i]
+            nums[k] = nums[i];
+            k++; // Increment k to indicate a non-val element is placed at index k
+        }
     }
-}
-console.log(++k);
+
+    // return k; // Return k, which represents the length of the modified array without val
+    console.log(k);
+
+
