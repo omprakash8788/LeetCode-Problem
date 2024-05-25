@@ -1,4 +1,4 @@
-
+// Largest Lucky number
 let arr = [2,2,3,4]
 const freq = {};
 
